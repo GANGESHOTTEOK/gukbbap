@@ -1,7 +1,7 @@
 
 # 2020년 12월 28일 월요일
 # 백준 2798번 [블랙잭]
-# https://www.acmicpc.net/problem/2798
+### https://www.acmicpc.net/problem/2798
 
 ---
 
