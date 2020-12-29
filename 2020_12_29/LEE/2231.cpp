@@ -11,18 +11,26 @@ int getGenerateNum(int num) {
     return result;
 }
 
+int getStartIndex(int num) {
+    int result = 0;
+    for (int i = 1; i < num; i *= 10) {
+        result += 9;
+    }
+    return num - result;
+}
+
 int main(void) {
     int num = 0;
     cin >> num;
     int i;
-    for (i = 1; i < num + 1; i++) {
+    for (i = getStartIndex(num); i < num; i++) {
         int generateNum = getGenerateNum(i);
         if (num == generateNum) {
             cout << i;
-            break;
+            return 0;
         }
     }
-    if (i == num + 1) cout << 0;
+    if (i == num) cout << 0;
     return 0;
 }
 
