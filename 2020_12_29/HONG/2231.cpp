@@ -4,16 +4,15 @@ using namespace std;
 
 
 int main(){
-    int N, count, sum, min= 0;
+    int N, Nnum, count, sum, min= 0;
     int num[7];
-    int Nnum;
 
     cin >> N;
 
     for(int i=1; i<64; i++){
-        count = 0;
-        sum = 0;
+        sum, count = 0;
         Nnum = N-i;
+        
         fill_n(num, 7, -1);
 
         while (Nnum >= 1){
@@ -25,7 +24,7 @@ int main(){
         for(int j=0; num[j] != -1; j++)
             sum += num[j]*(pow(10, j) + 1);
         
-        if(sum == N && sum > min) min = N-i;
+        if(sum == N) min = N-i;
     }
 
     cout << min;
