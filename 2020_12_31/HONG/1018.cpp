@@ -1,76 +1,55 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
-#include <utility>
 using namespace std;
-string WB[8] = {
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW"
-};
-string BW[8] = {
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB"
-};
-string board[50];
-int WB_cnt(int x, int y)
-{
-    int cnt = 0;
-    for(int i = 0; i < 8; i++)
-    {
-        for(int j = 0; j < 8; j++)
-        {
-            if(board[x+i][y+j] != WB[i][j])
-                cnt++;
-        }
 
-    }
-    return cnt;
-}
-int BW_cnt(int x, int y)
-{
-    int cnt = 0;
-    for(int i = 0; i < 8; i++)
-    {
-        for(int j = 0; j < 8; j++)
-        {
-            if(board[x+i][y+j] != BW[i][j])
-                cnt++;
-        }
+int main(){
+    int N, M;
+    int sum = 0;
+    int min = 64;
+    string test = "B";
+    bool board[50][50];
 
-    }
-    return cnt;
-}
-int main() {
-    int size[2];
-    int cnt;
-    int min_val = 12345;
-    pair<int, int> p1;
-    cin >> p1.first >> p1.second;
-    for(int i = 0; i < p1.first; i++)
-        cin >> board[i];
-    for(int i = 0; i + 8 <= p1.first; i++)
-    {
-        for(int j = 0; j + 8 <= p1.second; j++)
-        {
-            int tmp;
-            tmp = min(WB_cnt(i,j),BW_cnt(i,j));
-            if(tmp < min_val) {
-                min_val = tmp;
+    cin >> N >> M;
+
+    for(int i=0; i<N; i++){
+        cin >> test;
+
+        for(int j=0; j<M; j++){
+
+            if((i%2 + j%2) % 2){
+                if(test[j] == 'W') board[j][i] = true;
             }
+            else if(test[j] == 'B') board[j][i] = true;
+            else board[j][i] = false;
+            
         }
     }
-    cout << min_val;
+
+    for(int i=0; i<N-7; i++){
+        
+        for(int j=0; j<M-7; j++){
+            
+            sum = 0;
+
+            for (int a=i; a<i+8; a++){
+                for(int b=j; b<j+8; b++){
+                    sum += board[a][j];
+                }
+            }
+            cout << i << " " << j << " " << board[j][i] << endl;
+            
+            if( ((i%2 + j%2) % 2) == 0 && board[j][i] == true || ((i%2 + j%2) % 2) == 1 && board[j][i] == false ){
+                cout << "1sum = " << 64-sum << endl;
+                min = 64-sum<min ? sum : min;
+            }
+            else{
+                cout << "2sum = " << sum << endl;
+                min = sum<min ? sum : min; 
+            }
+
+       }
+    }
+    cout << "min = " << min << endl;
+
     return 0;
 }
