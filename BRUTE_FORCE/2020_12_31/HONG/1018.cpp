@@ -1,76 +1,54 @@
 #include <iostream>
-#include <string>
 #include <algorithm>
-#include <utility>
+
 using namespace std;
-string WB[8] = {
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW"
-};
-string BW[8] = {
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB",
-        "BWBWBWBW",
-        "WBWBWBWB"
-};
-string board[50];
-int WB_cnt(int x, int y)
-{
-    int cnt = 0;
-    for(int i = 0; i < 8; i++)
-    {
-        for(int j = 0; j < 8; j++)
-        {
-            if(board[x+i][y+j] != WB[i][j])
-                cnt++;
-        }
 
-    }
-    return cnt;
-}
-int BW_cnt(int x, int y)
-{
-    int cnt = 0;
-    for(int i = 0; i < 8; i++)
-    {
-        for(int j = 0; j < 8; j++)
-        {
-            if(board[x+i][y+j] != BW[i][j])
-                cnt++;
-        }
+int main(){
+    int N,M,sum;
+    int min = 32;
+    char temp;
+    bool board[50][50];
 
+    cin >> N >> M;
+
+    for(int i=0;i<N;i++){
+
+        for(int j=0;j<M;j++){
+
+            cin >> temp;
+
+            if(temp == 'B' && ((i%2)+(j%2))!=1) board[j][i] = true;
+            else if(temp == 'W' && ((i%2)+(j%2))==1) board[j][i] = true;
+            else board[j][i] = false;
+        }  
+        
     }
-    return cnt;
-}
-int main() {
-    int size[2];
-    int cnt;
-    int min_val = 12345;
-    pair<int, int> p1;
-    cin >> p1.first >> p1.second;
-    for(int i = 0; i < p1.first; i++)
-        cin >> board[i];
-    for(int i = 0; i + 8 <= p1.first; i++)
-    {
-        for(int j = 0; j + 8 <= p1.second; j++)
-        {
-            int tmp;
-            tmp = min(WB_cnt(i,j),BW_cnt(i,j));
-            if(tmp < min_val) {
-                min_val = tmp;
+    
+    for(int i=0;i<=N-8;i++){
+
+        for(int j=0;j<=M-8;j++){
+
+            sum = 0;
+
+            for(int a=i;a<8;a++){
+
+                for(int b=j;b<8;b++){
+
+                    sum += board[a][b];
+
+                }
             }
-        }
+
+            if(sum <= 32 && sum < min) {
+                min = sum;
+            }
+            else if(sum > 32 && min > 64-sum) {
+                min = 64-sum;
+            }
+
+            
+        }   
     }
-    cout << min_val;
-    return 0;
+
+    cout << min;
 }
