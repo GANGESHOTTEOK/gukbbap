@@ -1,22 +1,3 @@
-
-# 백준 2108번 문제
-
----
-
-### 문제 해결 날짜 및 시간
-
-- 2021년 01월 06일 23시 59분
-
----
-### 메모리 및 시간
-
-- 메모리 : 2016KB
-- 시간 : 48ms
-
----
-
-### 접근 방식
-```cpp
 #include <iostream>
 #include <cmath>
 #define FOR(a,n) for (int i = 0; i < (n); i++)
@@ -63,14 +44,4 @@ int main(void) {
     cout << mean << "\n" << median << "\n" << mode << "\n" << range << "\n";
     return 0;
 }
-
-
-
-
-```
-딱히 특별한 코드는 아님. 문제 의도대로 `counting sort`를 이용해서 풀었다.  
-다만 `define macro`를 이용해 `for`구문을 약간 간소화 시켰음.
-
-
-
 
