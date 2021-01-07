@@ -5,6 +5,8 @@
         "ostream": "cpp",
         "string": "cpp",
         "ios": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "iosfwd": "cpp"
     }
 }
