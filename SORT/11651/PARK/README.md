@@ -18,7 +18,7 @@
 ### 소스코드
 - 2676KB, 68ms
 
-'''C
+```C
 #include <stdio.h>
 
 int Coordinate[100000][2] = {0,};
@@ -95,4 +95,4 @@ int main(void) {
 	}
 	return 0;
 }
-'''
+```

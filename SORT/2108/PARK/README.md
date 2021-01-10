@@ -21,7 +21,7 @@
 ### 소스코드
 - 5052KB, 116ms
 
-'''C
+```C
 #include <stdio.h>
 #include <math.h>
 
@@ -130,4 +130,4 @@ int main(void) {
 	
 	return 0;
 }
-'''
+```
