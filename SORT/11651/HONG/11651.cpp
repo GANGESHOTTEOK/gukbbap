@@ -4,11 +4,6 @@
 #include <utility>
 using namespace std;
 
-bool comp(pair<int,int> a,pair<int,int> b){
-    if(a.second == b.second) return a.first < b.first;
-    else return a.second < b.second;
-}
-
 int main(){
     int N,tmpx,tmpy;
 
@@ -21,10 +16,11 @@ int main(){
         loc.push_back(make_pair(tmpx,tmpy));
     }
 
-    sort(loc.begin(),loc.end(),comp);
+    sort(loc.begin(),loc.end(),[](pair<int,int> a,pair<int,int> b){
+        return a.second == b.second ? a.first < b.first : a.second < b.second;});
 
-    for(int i=0;i<N;i++)
-        cout << loc[i].first << " " << loc[i].second << "\n";
+    for(auto i:loc)
+        cout << i.first << " " << i.second << "\n";
 
     return 0;
 }
