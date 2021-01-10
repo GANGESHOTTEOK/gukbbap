@@ -12,8 +12,8 @@
 // 삽질 ver.3
 // merge sort에 x자표가 같은 경우 y로 비교 조건문 추가 => AC 
 
-int Coordinate[100000][2] = {0,};
-int SortedCoordinate[100000][2] = {0,};
+int Coordinate[100000][2] = {0,}; // 입력 받는 배열
+int SortedCoordinate[100000][2] = {0,}; // 정렬된 배열
 
 int merge(int Left, int Right, int Middle, int Coordinate[][2]) {
 	
@@ -24,7 +24,7 @@ int merge(int Left, int Right, int Middle, int Coordinate[][2]) {
 			SortedCoordinate[k][0] = Coordinate[i][0];
 			SortedCoordinate[k][1] = Coordinate[i][1];
 			i = i + 1;
-		}
+		} // x값이 같을 경우 y로 판단을 위한 조건문
 		else if (Coordinate[i][0] == Coordinate[j][0] && Coordinate[i][1] < Coordinate[j][1]) {
 			SortedCoordinate[k][0] = Coordinate[i][0];
 			SortedCoordinate[k][1] = Coordinate[i][1];
@@ -76,13 +76,13 @@ int main(void) {
 	scanf("%d", &N);
 	
 	for (int i = 0; i < N; i++) {
-		scanf("%d %d", &Coordinate[i][0], &Coordinate[i][1]);
+		scanf("%d %d", &Coordinate[i][0], &Coordinate[i][1]); // x, y 입력 
 	}
 	
-	merge_sort(0, N-1, Coordinate);
+	merge_sort(0, N-1, Coordinate); // merge sort 시작 
 	
 	for (int i = 0; i < N; i++) {
-		printf("%d %d\n", Coordinate[i][0], Coordinate[i][1]);
+		printf("%d %d\n", Coordinate[i][0], Coordinate[i][1]); // 출력
 	}
 	return 0;
 }
