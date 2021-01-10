@@ -1,84 +1,26 @@
-#include <cstdio>
-#include <algorithm>
-#include <vector>
+#include <iostream>
+#define MAX 10000
 using namespace std;
 
-void heap_generator(vector<int> *data, int num){
-	
-	for(int i=1; i<num; i++){
-		int child = i;
-			
-		while(child>0){
-			int root = (child - 1)/ 2;
-			 
-			if((*data)[root] > (*data)[child]){
-				swap((*data)[root],(*data)[child]);
-				child = root;
-			}
-			else break;
-		}
-	}
-}
+int main(){
+	ios_base :: sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 
-int main() {
-	int num,tmp;
-	vector<int> data;
+	int N,tmp;
+	int num[MAX] = {0,};
 
-	scanf("%d",&num);
-	
-	for(int i = 0; i < num; i++){
-		scanf("%d",&tmp);
-		data.push_back(tmp);
+	cin >> N;
+
+	for(int i=0;i<N;i++){
+		cin >> tmp;
+		num[tmp-1]++;
 	}
 
-	data.push_back(0);
-
-	heap_generator(&data,num);
-
-	
-
-	for(int i = num-1;i>0;i--){
-
-		swap(data[i],data[0]);
-		printf("switch %d %d \n",data[i],data[0]);
-
-		int root = 0;
-		int child = 0;
-			
-		while(root<i){
-			if(root*2+2 < i+1 && i+1 < root*2+1) 
-				child = root*2+2;
-
-			else if(root*2+1 < i+1 && i+1 < root*2+2)
-				child = root*2+1;
-			
-			else if(root*2+1 < i+1 && i+1 > root*2+2) {
-				child = data[root*2+1] <= data[root*2+2] ? root*2+1 : root*2+2;
-			}
-			else {
-				printf("stop1\n");
-				break;
-			
-			}
-			
-			
-			printf("i= %d root %d %d childs %d\n",i,data[root],root,child);
-
-			if(data[root] > data[child]){
-				swap(data[root],data[child]);
-				root = child;
-			}
-			else {
-				printf("stop2\n");
-				break;
-			
-			}
-		}
-
+	for(int i=0;i<MAX;i++){
+		if(num[i]==1) cout << i+1 << "\n";
+		else if(num[i])
+			for(int j=0;j<num[i];j++)
+				cout << i+1 << "\n";
 	}
-	
-	for(int i = num-1; i>=0; i--) {
-		printf("%d\n",data[i]);
-	}
+
 	return 0;
 }
