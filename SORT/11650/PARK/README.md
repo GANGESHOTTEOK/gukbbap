@@ -20,7 +20,7 @@
 ### 소스코드
 - 2676KB, 64ms
 
-'''C
+```C
 #include <stdio.h>
 
 int Coordinate[100000][2] = {0,}; // 입력 받는 배열
@@ -97,4 +97,4 @@ int main(void) {
 	}
 	return 0;
 }
-'''
+```
