@@ -1,7 +1,7 @@
 
 # 2021년 01월 13일 수요일
 # 백준 9663번 [N-Queen]
-### https://www.acmicpc.net/problem/15652
+### https://www.acmicpc.net/problem/9663
 
 ---
 
