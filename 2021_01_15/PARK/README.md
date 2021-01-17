@@ -5,32 +5,94 @@
 
 ---
 
-### 문제
-N개의 수로 이루어진 수열 A1, A2, ..., AN이 주어진다. 또, 수와 수 사이에 끼워넣을 수 있는 N-1개의 연산자가 주어진다. 연산자는 덧셈(+), 뺄셈(-), 곱셈(×), 나눗셈(÷)으로만 이루어져 있다.  
-
-우리는 수와 수 사이에 연산자를 하나씩 넣어서, 수식을 하나 만들 수 있다. 이때, 주어진 수의 순서를 바꾸면 안 된다.  
-
-예를 들어, 6개의 수로 이루어진 수열이 1, 2, 3, 4, 5, 6이고, 주어진 연산자가 덧셈(+) 2개, 뺄셈(-) 1개, 곱셈(×) 1개, 나눗셈(÷) 1개인 경우에는 총 60가지의 식을 만들 수 있다. 예를 들어, 아래와 같은 식을 만들 수 있다.  
-
-- 1+2+3-4×5÷6
-- 1÷2+3+4-5×6
-- 1+2÷3×4-5+6
-- 1÷2×3-4+5+6  
-
-식의 계산은 연산자 우선 순위를 무시하고 앞에서부터 진행해야 한다. 또, 나눗셈은 정수 나눗셈으로 몫만 취한다. 음수를 양수로 나눌 때는 C++14의 기준을 따른다. 즉, 양수로 바꾼 뒤 몫을 취하고, 그 몫을 음수로 바꾼 것과 같다. 이에 따라서, 위의 식 4개의 결과를 계산해보면 아래와 같다.  
-
-- 1+2+3-4×5÷6 = 1
-- 1÷2+3+4-5×6 = 12
-- 1+2÷3×4-5+6 = 5
-- 1÷2×3-4+5+6 = 7  
-N개의 수와 N-1개의 연산자가 주어졌을 때, 만들 수 있는 식의 결과가 최대인 것과 최소인 것을 구하는 프로그램을 작성하시오.
+### 문제 해결 날짜 및 시간
+- 2021.01.12 23:42
 
 ---
 
-### 입력
-첫째 줄에 수의 개수 N(2 ≤ N ≤ 11)가 주어진다. 둘째 줄에는 A1, A2, ..., AN이 주어진다. (1 ≤ Ai ≤ 100) 셋째 줄에는 합이 N-1인 4개의 정수가 주어지는데, 차례대로 덧셈(+)의 개수, 뺄셈(-)의 개수, 곱셈(×)의 개수, 나눗셈(÷)의 개수이다. 
+### 접근방식
+- 최소, 최대를 계산하는 부분, 연산자의 개수와 순서에 따라 계산하는 부분 
 
 ---
 
-### 출력
-첫째 줄에 만들 수 있는 식의 결과의 최댓값을, 둘째 줄에는 최솟값을 출력한다. 연산자를 어떻게 끼워넣어도 항상 -10억보다 크거나 같고, 10억보다 작거나 같은 결과가 나오는 입력만 주어진다. 또한, 앞에서부터 계산했을 때, 중간에 계산되는 식의 결과도 항상 -10억보다 크거나 같고, 10억보다 작거나 같다.
+### 소스코드
+- 1116KB, 0ms
+
+```C
+#include <stdio.h>
+#include <limits.h>
+
+// 2021.01.12 23:42
+
+// int 범위 -2,147,483,648 ~ 2,147,483,647
+
+// calc을 다시 돌려줘야 하는 걸 체크 못함. => 해결 
+// 다른 사람 풀이가 더 간단함. https://www.acmicpc.net/source/17074528
+
+// 2021.01.17 18:42.
+// 다시보니 굳이 CheckMaxMin에 5개의 para라 필요없었음(Depth와 Calc만 있어도 충분)
+// Operator의 value를 빼주고 아니면 더해주고
+// 매개변수 선정의 중요성. 훨씬 간결하고 깔끔한 코드를 만들 수 있음 
+
+int NumArr[11], Operator[4];
+int N;
+int Max = INT_MIN, Min = INT_MAX;
+int Calc = 0;
+int CheckMaxMin(int Plus, int Minus, int Multiply, int Divide, int Depth) {
+
+	if (Depth == N) { // 모든 연산을 끝냈다면
+		if (Calc > Max) { // 계산값이 현재 MAX보다 크다면 
+			Max = Calc;
+		}
+		if (Calc < Min) { // 계산값이 현재 MIN보다 작다면 
+			Min = Calc;
+		}
+		return 0;
+	}
+	
+	int Remainder = Calc % NumArr[Depth]; // 나누었을 때의 값이 올바르지 않을 때 다시 더해주기위해 
+	
+	for (int i = 0; i < 4; i++) {
+		if (i == 0 && Plus) { // 더하기 차례이고 해당 값이  있다면
+			Calc = Calc + NumArr[Depth];
+			CheckMaxMin(Plus-1, Minus, Multiply, Divide, Depth+1);
+			Calc = Calc - NumArr[Depth];
+		}
+		if (i == 1 && Minus) { // 빼기 차례이고 해당 값이 있다면
+			Calc = Calc - NumArr[Depth];
+			CheckMaxMin(Plus, Minus-1, Multiply, Divide, Depth+1);
+			Calc = Calc + NumArr[Depth];
+		}
+		if (i == 2 && Multiply) { // 곱하기 차례이고 해당 값이 있다면
+			Calc = Calc * NumArr[Depth];
+			CheckMaxMin(Plus, Minus, Multiply-1, Divide, Depth+1);
+			Calc = Calc / NumArr[Depth];
+		}
+		if (i == 3 && Divide) { // 나누기 차례이고 해당 값이 있다면
+			Calc = Calc / NumArr[Depth];
+			CheckMaxMin(Plus, Minus, Multiply, Divide-1, Depth+1);
+			Calc = Calc * NumArr[Depth] + Remainder;
+		}
+	}
+}
+
+int main(void) {
+	
+	scanf("%d", &N);
+	
+	for (int i = 0; i < N; i++) { // 수 저장 
+		scanf("%d", &NumArr[i]);
+	}
+	for (int i = 0; i < 4; i++) { // 연산자 저장 
+		scanf("%d", &Operator[i]);
+	}
+	
+	Calc = NumArr[0];
+	
+	CheckMaxMin(Operator[0], Operator[1], Operator[2], Operator[3], 1);
+	
+	printf("%d\n%d\n", Max, Min);
+	
+	return 0;
+} 
+```

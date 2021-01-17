@@ -14,10 +14,11 @@ int N, Count = 0;
 int QueenPlace[16];
 
 int CheckPlace (int x, int y) {
-	for (int i = 0; i < x; i++) {
+	for (int i = 0; i < x; i++) { // 퀸의 위치가 저장된 배열과 현재 넣으려는 위치 비교 
 		if (QueenPlace[i] == y || abs(x-i) == abs(QueenPlace[i]-y)) {
 			return 0;
 		}
+		// 가로, 세로, 대각선 비교 
 	}
 	return 1;
 }
@@ -30,8 +31,8 @@ int NumberOfCases (int NowDepth) {
 	}
 	
 	for (int i = 0; i < N; i++) {
-		QueenPlace[NowDepth] = i;
-		if (CheckPlace(NowDepth, i)) {
+		QueenPlace[NowDepth] = i; // 퀸의 위치를 배열에 삽입 
+		if (CheckPlace(NowDepth, i)) { // 둘 수 있는 곳인지 확인 
 			NumberOfCases(NowDepth + 1);
 		}
 	}
