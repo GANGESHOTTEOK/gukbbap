@@ -39,11 +39,11 @@ int CheckSudoku(int IndexI, int IndexJ, int NowNumber) {
 }
 
 int SolveSudoku(int Count) {
-	if (Count == 81) {
+	if (Count == 81) { // 스도쿠 칸의 개수는 81개. 0부터 시작했으니 81이면
 		
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
-				printf("%d ", Sudoku[i][j]);
+				printf("%d ", Sudoku[i][j]); // 스도쿠를 출력하세요 
 			}
 			printf("\n");
 		}
@@ -51,21 +51,21 @@ int SolveSudoku(int Count) {
 		exit(0);
 	}
 	
-	int i = Count / 9;
-	int j = Count % 9;
+	int i = Count / 9; // row
+	int j = Count % 9; // col
 
-	if (Sudoku[i][j] == 0) {
+	if (Sudoku[i][j] == 0) { // 현재 index에 수가 없으면 
 		for (int k = 1; k <= 9; k++) {
-			if (CheckSudoku(i, j, k)) {
-				Sudoku[i][j] = k;
-				SolveSudoku(Count + 1);
-				Sudoku[i][j] = 0;
+			if (CheckSudoku(i, j, k)) { // 현재 k가 들어가기에 알맞은 수인지 
+				Sudoku[i][j] = k; // 맞으면 k 대입 
+				SolveSudoku(Count + 1); // 다음 index 
+				Sudoku[i][j] = 0; // 1~9 중 맞는 수가 없을 떄를 대비한 초기화 
 			}
 
 		}
 	}
-	else {
-		SolveSudoku(Count + 1);
+	else { // 현재 index에 수가 있으면 
+		SolveSudoku(Count + 1); // 다음 index 
 	}
 
 	return 0;
