@@ -1,18 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int m[21][21][21];
-int w(int a, int b, int c) {
-    if(a<=0 || b<=0 || c<=0) return 1;
-    if(a>20 || b>20 || c>20) return w(20,20,20);
-    if(m[a][b][c]) return m[a][b][c];
-    if(a<b && b<c) return m[a][b][c] = w(a,b,c-1) + w(a,b-1,c-1) - w(a,b-1,c);
-    return m[a][b][c] = w(a-1,b,c) + w(a-1,b-1,c) + w(a-1, b, c-1) - w(a-1,b-1,c-1);
-}
+long long reg[1000001];
+long long fx(int n) {
+    if(n==0) return 0;
+    if(n==1) return 1;
+    if(n==2) return 2;
+    if(reg[n]) return reg[n]%15746;
+    return (reg[n] = fx(n-1) + fx(n-2))%15746;
+};
 int main() {
-    int x,y,z;
-    while(1) {
-        cin >> x >> y >> z;
-        if(x==-1 && y==-1 && z==-1) break;
-        cout << "w(" << x << ", " << y << ", " << z << ") = " << w(x,y,z) << "\n";
-    }
+    cin.tie(NULL);
+	ios::sync_with_stdio(false);
+    int N;
+    cin >> N;
+    cout << fx(N);
+    return 0;
 }
