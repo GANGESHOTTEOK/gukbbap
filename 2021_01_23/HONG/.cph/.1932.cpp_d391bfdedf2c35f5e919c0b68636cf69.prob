@@ -1,0 +1,1 @@
+{"name":"Local: 1932","url":"/Users/yoojunhong/Desktop/gukbbap/2021_01_23/HONG/1932.cpp","tests":[{"id":1610954682220,"input":"5\n7\n3 8\n8 1 0\n2 7 4 4\n4 5 2 6 5","output":"30"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yoojunhong/Desktop/gukbbap/2021_01_23/HONG/1932.cpp","group":"local","local":true}
