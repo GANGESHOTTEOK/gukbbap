@@ -61,6 +61,7 @@
         "type_traits": "cpp",
         "unordered_map": "cpp",
         "queue": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "__memory": "cpp"
     }
 }
