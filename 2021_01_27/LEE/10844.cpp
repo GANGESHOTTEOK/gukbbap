@@ -1,22 +1,3 @@
-
-# 백준 10844번 문제
-
----
-
-### 문제 해결 날짜 및 시간
-
-- 2021년 01월 27일 23시 59분
-
----
-### 메모리 및 시간
-
-- 메모리 : 2016KB
-- 시간 : 0ms
-
----
-
-### 접근 방식
-```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -52,10 +33,3 @@ int main(void) {
     cout << result % 1000000000 << endl;
     return 0;
 }
-
-
-```
-
-
-
-
