@@ -9,7 +9,6 @@ int fx(int n) {
     if(n%2) return dp[n] = min(fx(n-1), fx(n/3)) + 1;
     if(n%3) return dp[n] = min(fx(n-1), fx(n/2)) + 1;
     return dp[n] = min(fx(n-1), min(fx(n/2), fx(n/3))) + 1;
-            
 }
 int main() {
     cin >> N;
