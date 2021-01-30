@@ -24,25 +24,21 @@
 
 using namespace std;
 
-int main(void) {
-    int n; cin >> n;
-    vector <int> numList(n, 0);
-    vector <int> dp(n, 1);
-    for (int i = 0; i < n; i++) cin >> numList[i];
+vector <int> n, dp;
+int N;
+
+int main() {
+    cin >> N;
+    n = vector <int>(N, 0);
+    dp = vector <int>(N, 1);
+    for (int i = 0; i < N; i++) cin >> n[i];
     
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < N; i++) {
         for (int j = 0; j < i; j++) {
-            if (numList[i] > numList[j]) {
-                if (dp[i] < dp[j] + 1) dp[i] = dp[j] + 1;
-            }
+            if (n[i] > n[j]) dp[i] = max(dp[i], dp[j] + 1);
         }
     }
-    
-    int ans = dp[0];
-    for (int i = 0; i < n; i++) ans = ans < dp[i] ? dp[i] : ans;
-    cout << ans << endl;
-    
-    
+    cout << *max_element(dp.begin(), dp.end()) << endl; 
     return 0;
 }
 
