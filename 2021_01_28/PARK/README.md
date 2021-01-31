@@ -43,16 +43,14 @@ int main(void) {
 	
 	if (N > 2) { //101, 011, 110
 		WineMax[2] = ReturnBiger(ReturnBiger(WineMax[2]-Wine[0], WineMax[2]-Wine[1]), WineMax[2]-Wine[2]);
+		printf("\n%d %d\n", 2, WineMax[2]);
 	}
-	if (N > 3) { //1101, 1011, 0110
-		WineMax[3] = ReturnBiger(ReturnBiger(WineMax[3]-Wine[0]-Wine[3], WineMax[3]-Wine[1]), WineMax[3]-Wine[2]);
-	}
-	if (N > 4) { // 011, 01, 0110
-		for(int i = 4; i < N; i++) {
-			WineMax[i] = ReturnBiger(WineMax[i-4]+Wine[i-1]+Wine[i-2], ReturnBiger(WineMax[i-3]+Wine[i-1], WineMax[i-2])+Wine[i]);
+	if (N > 3) { // 011, 01, 0
+		for(int i = 3; i < N; i++) {
+			WineMax[i] = ReturnBiger(WineMax[i-1], ReturnBiger(WineMax[i-3]+Wine[i-1], WineMax[i-2])+Wine[i]);
+			printf("%d %d\n", i, WineMax[i]);
 		}
 	}
-	// 더 간단하게 가능. 수정하기 
 	
 	
 	printf("%d", WineMax[N-1]);
