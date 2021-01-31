@@ -40,9 +40,9 @@ int main(void) {
 	
 	for (int i = 1; i < N; i++) {
 		for (int j = 0; j < 10; j++) {
-			if (j == 0)
+			if (j == 0) // 0일 때는 +1
 				StairsNum[i][j] = StairsNum[i-1][j+1] % Divisor;
-			else if (j == 9)
+			else if (j == 9) // 9일 때는 -1
 				StairsNum[i][j] = StairsNum[i-1][j-1] % Divisor;
 			else
 				StairsNum[i][j] = (StairsNum[i-1][j-1] + StairsNum[i-1][j+1]) % Divisor;
