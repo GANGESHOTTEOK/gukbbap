@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int N, A[101], B[501], minIndex=600, maxIndex=0,dp[501];
+int N, B[501], minIndex=600, maxIndex=0,dp[501];
 int fx(int n) {
     if(dp[n]) return dp[n];
     int M = 0;
