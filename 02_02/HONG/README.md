@@ -1,5 +1,5 @@
 BOJ 9251번 LCS
-<img src="https://i.ibb.co/cXqscq2/image.png" alt="image" border="0">
+![](https://i.ibb.co/cXqscq2/image.png)
 문제 접근
 ---
 두 개의 수열이 주어지면 각각의 부분 수열 중 공통된 것들 중 가장 긴 수열, 즉 최장공통부분수열의 길이를 출력해야한다.
