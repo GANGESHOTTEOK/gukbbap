@@ -16,6 +16,6 @@ int main(){
             else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
         }
 
-    cout << dp[str[0].length()][str[1].length()] << " ";
+    cout << dp[str[0].length()][str[1].length()];
     return 0;
 }
