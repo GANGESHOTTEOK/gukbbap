@@ -1,0 +1,1 @@
+{"name":"Local: aa","url":"/Users/yoojunhong/Desktop/gukbbap/aa.cpp","tests":[{"id":1612368727419,"input":"10 11 12","output":"4"},{"id":1612369297172,"input":"3 7 5","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yoojunhong/Desktop/gukbbap/aa.cpp","group":"local","local":true}
