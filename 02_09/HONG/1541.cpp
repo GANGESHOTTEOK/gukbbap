@@ -10,6 +10,8 @@ int main(){
 
     cin >> exp;
 
+    exp+='-';
+
     for(int i=0;i<exp.length();i++){
         if(exp[i]=='+') {
             num[cnt++] = op*tmp;
@@ -25,10 +27,9 @@ int main(){
         }
         tmp = 0;
     }
-    num[cnt++] = tmp;
-    num[cnt] = -1;
 
     int idx=0,sum=0,total=0;
+    num[cnt] = -1;
 
     while(num[idx]>=0) total+=num[idx++];
 
