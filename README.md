@@ -60,4 +60,15 @@
 |[12865](https://www.acmicpc.net/problem/12865)|평범한 배낭|동적계획법|2021년 02월 04일|
 |[11047](https://www.acmicpc.net/problem/11047)|동전 0|그리디|2021년 02월 05일|
 |[1931](https://www.acmicpc.net/problem/1931)|회의실 배정|그리디|2021년 02월 06일|
-<!-- |[](https://www.acmicpc.net/problem/)||그리디|2021년 02월 05일| -->
+|[11399](https://www.acmicpc.net/problem/11399)|ATM|그리디|2021년 02월 08일|
+|[1541](https://www.acmicpc.net/problem/1541)|잃어버린 괄호|그리디|2021년 02월 09일|
+|[13305](https://www.acmicpc.net/problem/13305)|주유소|그리디|2021년 02월 10일|
+|[10828](https://www.acmicpc.net/problem/10828)|스택|스택|2021년 02월 11일|
+|[10773](https://www.acmicpc.net/problem/10773)|제로|스택|2021년 02월 12일|
+|[9012](https://www.acmicpc.net/problem/9012)|괄호|스택|2021년 02월 13일|
+<!-- |[4949](https://www.acmicpc.net/problem/4949)|균형잡힌 세상|스택|2021년 02월 15일| -->
+<!-- |[1874](https://www.acmicpc.net/problem/1874)|스택 수열|스택|2021년 02월 16일| -->
+<!-- |[17298](https://www.acmicpc.net/problem/17298)|오큰수|스택|2021년 02월 17일| -->
+<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 18일| -->
+<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 19일| -->
+<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 20일| -->
