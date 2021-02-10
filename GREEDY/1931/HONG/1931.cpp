@@ -1,37 +1,29 @@
 #include <iostream>
 #include <vector>
+#include <utility>
 #include <algorithm>
 using namespace std;
- 
-pair<int, int> P;
-vector<pair<int, int>> arr;
- 
-bool comp(pair<int, int> a, pair<int, int> b){
-    if(a.second == b.second) return a.first < b.first;
-    else return a.second < b.second;
-}
- 
+
 int main(){
-    int N;
+    int N,tmp_srt,tmp_end;
+    typedef vector<pair<int,int> > time;
+    time session;
+
     cin >> N;
-    
-    int start, end;
-    for(int i = 0; i < N; i++){
-        cin >> start >> end;
-        arr.push_back(make_pair(start, end));
+    for(int i=0;i<N;i++){
+        cin >> tmp_srt >> tmp_end;
+        session.push_back(make_pair(tmp_end,tmp_srt));
     }
-    sort(arr.begin(), arr.end(), comp);
-    
-    int now = arr[0].second;
-    int cnt = 1;
-    for(int i = 1; i < N; i++){
-        if(now <= arr[i].first){
+
+    sort(session.begin(),session.end());
+
+    int cnt = 1, last = session[0].first;
+    for(int i=1;i<N;i++)
+        if(session[i].second >= last) {
             cnt++;
-            now = arr[i].second;
+            last = session[i].first;
         }
-    }
-    
-    cout << cnt << '\n';
-    
+    cout << cnt;
+
     return 0;
 }
