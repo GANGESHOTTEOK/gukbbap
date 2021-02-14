@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
+#define MAX_VAL 1000000001
 using namespace std;
 
 int n, t;
-long long int total = 0, gas = 0;
-vector <int> city;
+long long int total = 0, min_price = MAX_VAL;
 vector <long int> road;
 
 int main(void) {
@@ -13,18 +13,12 @@ int main(void) {
         cin >> t;
         road.push_back(t);
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         cin >> t;
-        city.push_back(t);
-    }
-    int min_price = city[0];
-    total = city[0] * road[0];
-    for (int i = 1; i < n - 1; i++) {
-        if (min_price > city[i]) {
-            min_price = city[i];
-        }
+        min_price = t < min_price ? t : min_price;
         total += min_price * road[i];
     }
+    cin >> t;
     cout << total << endl;
     return 0;
 }
