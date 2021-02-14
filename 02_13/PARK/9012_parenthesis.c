@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// 2021.02.10 21:44
+
 int main(void) {
 	int T, Left = 0, Right = 0, VPS = 0;
 	char Parenthesis[51];
