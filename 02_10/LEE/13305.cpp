@@ -1,22 +1,3 @@
-
-# 백준 13305번 문제
-
----
-
-### 문제 해결 날짜 및 시간
-
-- 2021년 02월 10일 23시 20분
-
----
-### 메모리 및 시간
-
-- 메모리 : 4072KB
-- 시간 : 96ms
-
----
-
-### 접근 방식
-```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -47,10 +28,3 @@ int main(void) {
     cout << total << endl;
     return 0;
 }
-
-```
-
-
-
-
-
