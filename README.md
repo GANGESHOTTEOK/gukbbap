@@ -66,9 +66,17 @@
 |[10828](https://www.acmicpc.net/problem/10828)|스택|스택|2021년 02월 11일|
 |[10773](https://www.acmicpc.net/problem/10773)|제로|스택|2021년 02월 12일|
 |[9012](https://www.acmicpc.net/problem/9012)|괄호|스택|2021년 02월 13일|
-<!-- |[4949](https://www.acmicpc.net/problem/4949)|균형잡힌 세상|스택|2021년 02월 15일| -->
-<!-- |[1874](https://www.acmicpc.net/problem/1874)|스택 수열|스택|2021년 02월 16일| -->
-<!-- |[17298](https://www.acmicpc.net/problem/17298)|오큰수|스택|2021년 02월 17일| -->
-<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 18일| -->
-<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 19일| -->
-<!-- |[](https://www.acmicpc.net/problem/)||큐,덱|2021년 02월 20일| -->
+|[4949](https://www.acmicpc.net/problem/4949)|균형잡힌 세상|스택|2021년 02월 15일|
+|[1874](https://www.acmicpc.net/problem/1874)|스택 수열|스택|2021년 02월 15일|
+|[17298](https://www.acmicpc.net/problem/17298)|오큰수|스택|2021년 02월 15일|
+|[18258](https://www.acmicpc.net/problem/18258)|큐 2|큐,덱|2021년 02월 16일|
+|[2164](https://www.acmicpc.net/problem/2164)|카드2|큐,덱|2021년 02월 16일|
+|[11866](https://www.acmicpc.net/problem/11866)|요세푸스 문제 0|큐,덱|2021년 02월 16일|
+|[1966](https://www.acmicpc.net/problem/1966)|프린터 큐|큐,덱|2021년 02월 17일|
+|[10866](https://www.acmicpc.net/problem/10866)|덱|큐,덱|2021년 02월 17일|
+|[1021](https://www.acmicpc.net/problem/1021)|회전하는 큐|큐,덱|2021년 02월 17일|
+|[5430](https://www.acmicpc.net/problem/5430)|AC|큐,덱|2021년 02월 17일|
+|[2630](https://www.acmicpc.net/problem/2630)|색종이 만들기|분할 정복|2021년 02월 18일|
+|[1992](https://www.acmicpc.net/problem/1992)|쿼드트리|분할 정복|2021년 02월 19일|
+|[1780](https://www.acmicpc.net/problem/1780)|종이의 개수|분할 정복|2021년 02월 20일|
+<!-- |[](https://www.acmicpc.net/problem/)||분할 정복|2021년 02월 20일| -->
