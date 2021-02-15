@@ -13,14 +13,15 @@
 - 
 
 ### 소스코드
-- 메모리 : 17298KB
-- 시간 : 600ms
+- 메모리 : 114200KB
+- 시간 : 216ms
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
 int N;
 stack< pair<int,int> > s;
 int main() {
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     cin >> N;
     int NGE[N];
     for(int i=0; i<N; i++) {
