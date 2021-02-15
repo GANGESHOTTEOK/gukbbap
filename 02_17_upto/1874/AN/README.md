@@ -14,7 +14,7 @@
 
 ### 소스코드
 - 메모리 : 2408KB
-- 시간 : 60ms
+- 시간 : 20ms
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,6 +22,7 @@ int n;
 stack<int> s;
 vector<char> v;
 int main() {
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     cin >> n;
     int k=0;
     for(int i=0; i<n; i++) {

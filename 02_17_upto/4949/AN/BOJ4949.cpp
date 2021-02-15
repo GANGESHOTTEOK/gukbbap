@@ -24,6 +24,7 @@ int isVPS(string s) {
     else return 0;
 }
 int main() {
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     while(1) {
         getline(cin, sentence);
         if(sentence==".") break;

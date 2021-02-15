@@ -14,7 +14,7 @@
 
 ### 소스코드
 - 메모리 : 2020KB
-- 시간 : 140ms
+- 시간 : 4ms
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,6 +42,7 @@ int isVPS(string s) {
     else return 0;
 }
 int main() {
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     while(1) {
         getline(cin, sentence);
         if(sentence==".") break;
