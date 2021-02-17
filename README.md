@@ -19,7 +19,7 @@
 ### WHAT WE STUDIED
 
 |번호|제목|유형|날짜|
-|-|-|:-:|-|
+|:-:|:-|:-:|:-:|
 |[2798](https://www.acmicpc.net/problem/2798)|블랙잭|브루트포스|2021년 12월 28일|
 |[2231](https://www.acmicpc.net/problem/2231)|분해합|브루트포스|2021년 12월 29일|
 |[7568](https://www.acmicpc.net/problem/7568)|덩치|브루트포스|2021년 12월 30일|
