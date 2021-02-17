@@ -5,7 +5,7 @@
 
 **갠지스호떡**과 **국밥**을 좋아하는 부산 사람들의 **알고리즘 저장소**입니다
 
-팀원들은 `main`에 바로 푸쉬 하지말고 각자의 브랜치를 파서 일일 커밋한 뒤, [gangeshotteok/gukbbap](https://github.com/GANGESHOTTEOK/gukbbap) 으로 스터디 전 까지 Pull request 할 것!  
+팀원들은 `main`에 바로 푸쉬 하지말고 각자의 브랜치를 파서 일일 커밋한 뒤, [gangeshotteok/gukbbap](https://github.com/GANGESHOTTEOK/gukbbap) 으로 스터디 전 까지 Pull request 할 것!  1일 1커밋을 원칙으로 페널티 1회당 벌금 5천원임.
 
 ---
 
