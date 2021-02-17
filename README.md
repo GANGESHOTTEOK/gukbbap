@@ -5,14 +5,15 @@
 
 **갠지스호떡**과 **국밥**을 좋아하는 부산 사람들의 **알고리즘 저장소**입니다
 
-팀원들은 `main`에 바로 푸쉬 하지말고 각자의 브랜치를 파서 일일 커밋한 뒤, [gangeshotteok/gukbbap](https://github.com/GANGESHOTTEOK/gukbbap) 으로 스터디 전 까지 Pull request 할 것!
+팀원들은 `main`에 바로 푸쉬 하지말고 각자의 브랜치를 파서 일일 커밋한 뒤, [gangeshotteok/gukbbap](https://github.com/GANGESHOTTEOK/gukbbap) 으로 스터디 전 까지 Pull request 할 것!  
 
 ---
 
 ### 팀원
 
 |[AN](https://github.com/muzee99)|[HONG](https://github.com/kick-snare)|[LEE](https://github.com/rubinstory)|[PARK](https://github.com/DonghanPark)|
-|-|-|-|-|
+|:-:|:-:|:-:|:-:|
+|0|0|1|0|
 
 ---
 
