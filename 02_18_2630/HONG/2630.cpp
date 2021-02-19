@@ -31,11 +31,10 @@ void find_square(int x, int y, int size){
 }
 
 int main(){
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     int N;
     cin >> N;
     for(int i=0;i<N;i++) for(int j=0;j<N;j++) cin >> sqr[i][j];
     find_square(0,0,N);
     cout << white_sqr << "\n" << blue_sqr++;
-
-    return 0;
 }
