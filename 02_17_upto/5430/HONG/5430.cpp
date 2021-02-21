@@ -8,10 +8,12 @@ using namespace std;
 
 int main(){
     string p, tmp;
-    deque<int> d;
+    
     int T, n;
     cin >> T;
+
     for(int i=0;i<T;i++){
+        deque<int> d;
         cin >> p >> n >> tmp;
         for(int j=1;j<tmp.size()-1;j++) 
             if(tmp[j]!=','){
@@ -20,8 +22,8 @@ int main(){
         
         bool flag = true;
         for(int j=0;j<p.size();j++){
-            if(p[j]=='R') 
-                flag *= -1;
+            if(p[j]=='R') flag = !flag;
+                
             else{
                 if(d.empty()) {
                     cout << "error" << "\n";
@@ -31,12 +33,14 @@ int main(){
                 else d.pop_back();
             }
         }
+
+
         if(!d.empty()){
             if(flag)
-                for(int j=0;j<p.size();j++)
+                for(int j=0;j<d.size();j++)
                     cout << d[j] << " ";
             else 
-                for(int j=p.size()-1;j>=0;j++)
+                for(int j=d.size()-1;j>=0;j++)
                     cout << d[j] << " ";
             cout << endl;
         }
