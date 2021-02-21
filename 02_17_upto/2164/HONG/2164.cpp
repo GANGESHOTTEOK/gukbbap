@@ -9,7 +9,6 @@ int main(){
     for(int i=0;i<N;i++) q.push(i+1);
     while(q.size()>1){
         q.pop();
-        if(q.size()==1) break;
         q.push(q.front());
         q.pop();
     }
