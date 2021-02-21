@@ -11,8 +11,9 @@
 
 ### 접근 방식
 - [modulo 연산이 곱셈에서 분배법칙](https://sexycoder.tistory.com/66)이 성립한다는 점과 지수법칙을 이용한다.
+<p align='center'>
 <img src="https://t1.daumcdn.net/cfile/tistory/99DD8A335A66C98426" alt="image">
-
+</p>
 
 ### 소스코드
 - 메모리 : 2016KB
