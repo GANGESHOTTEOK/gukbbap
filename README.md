@@ -89,4 +89,4 @@
 |64|[11444](https://www.acmicpc.net/problem/11444)|피보나치 수 6|분할 정복|2021년 02월 25일|
 |65|[6549](https://www.acmicpc.net/problem/6549)|히스토그램에서 가장 큰 직사각형|분할 정복|2021년 02월 26일|
 |66|[2261](https://www.acmicpc.net/problem/2261)|가장 가까운 두 점|분할 정복|2021년 02월 27일|
-<!-- |[](https://www.acmicpc.net/problem/)||분할 정복|2021년 02월 20일| -->
+<!-- ||[](https://www.acmicpc.net/problem/)||분할 정복|2021년 02월 20일| -->
