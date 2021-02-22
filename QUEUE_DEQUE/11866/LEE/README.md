@@ -34,13 +34,12 @@ int main(void) {
     while(people.size() > 1) {
         if (idx == k) {
             cout << people.front() << ", ";
-            people.pop();
             idx = 0;
         }
         else {
             people.push(people.front());
-            people.pop();
         }
+        people.pop();
         idx++;
     }
     cout << people.front() << ">";

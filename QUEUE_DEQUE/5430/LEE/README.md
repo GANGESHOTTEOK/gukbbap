@@ -35,39 +35,31 @@ int main(void) {
         cin >> q;
         
         int cnt_delete = 0;
-        for (int j = 0; command[j]; j++) {
+        for (int j = 0; command[j]; j++)
             if (command[j] == 'D') cnt_delete++;
-        }
         
         string array;
         cin >> array;
         deque<int> dq;
         int temp = 0;
-        for (int j = 1; array[j]; j++) {
-            if (array[j] >= '0' && array[j] <= '9') {
+        for (int j = 1; array[j]; j++)
+            if (array[j] >= '0' && array[j] <= '9')
                 temp = temp * 10 + array[j] - '0';
-            }
+            
             else if (array[j - 1] >= '0' && array[j - 1] <= '9') {
                 dq.push_back(temp);
                 temp = 0;
             }
-        }
         bool reverse = false;
+
         if (cnt_delete > q) cout << "error\n";
         else {
-            for (int j = 0; command[j]; j++) {
-                if (command[j] == 'R') {
-                    reverse = !reverse;
-                }
-                else {
-                    if (reverse) {
-                        dq.pop_back();
-                    }
-                    else {
-                        dq.pop_front();
-                    }
-                }
-            }
+            for (int j = 0; command[j]; j++)
+                if (command[j] == 'R') reverse = !reverse;
+                else 
+                    if (reverse) dq.pop_back();
+                    else dq.pop_front();
+            
             cout << "[";
             if (reverse) {
                 deque<int>::reverse_iterator iter;
@@ -86,9 +78,6 @@ int main(void) {
             cout << "]\n";
         }
     }
-
-    
-    
     return 0;
 }
 ```
