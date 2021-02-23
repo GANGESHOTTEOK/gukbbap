@@ -17,7 +17,7 @@ int Multiple(int Num, int Repeat) {
 	long long int Temp = Multiple(Num, Repeat/2) % Divisor;
 	long long int Ans = (Temp * Temp) % Divisor;
 
-	if (Repeat&1)
+	if (Repeat&1) // if odd
 		Ans = (Ans * Num) % Divisor;
 	
 	return Ans;
