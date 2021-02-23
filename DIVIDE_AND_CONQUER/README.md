@@ -1,6 +1,6 @@
 
 
-## [분할 정복](https://www.acmicpc.net/step/13)
+## [분할 정복](https://www.acmicpc.net/step/20)
 
 |#|번호|제목|유형|날짜|
 |:-:|:-:|:-|:-:|:-:|
