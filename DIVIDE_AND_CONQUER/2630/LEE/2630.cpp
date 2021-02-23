@@ -12,7 +12,8 @@ void init() {
     for (int i = 0; i < n; i++) {
         paper[i] = new bool[n];
         for (int j = 0; j < n; j++) {
-            cin >> t; paper[i][j] = t;
+            cin >> t; 
+            paper[i][j] = t;
         }
     }
 }
