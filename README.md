@@ -15,7 +15,7 @@
 
 |[AN](https://github.com/muzee99)|[HONG](https://github.com/kick-snare)|[LEE](https://github.com/rubinstory)|[PARK](https://github.com/DonghanPark)|
 |:-:|:-:|:-:|:-:|
-|0|0|1|0|
+|0|1|2|0|
 
 ---
 
