@@ -1,22 +1,3 @@
-
-# 백준 11444번 문제
-
----
-
-### 문제 해결 날짜 및 시간
-
-- 2021년 02월 25일 23시 55분
-
----
-### 메모리 및 시간
-
-- 메모리 : 2016KB
-- 시간 : 0ms
-
----
-
-### 접근 방식
-```cpp
 #include <iostream>
 
 using namespace std;
@@ -63,12 +44,4 @@ int main(void) {
     cout << ans[0][!(n % 2)] % divisor << endl;
     return 0;
 }
-
-
-
-```
-
-
-
-
 
