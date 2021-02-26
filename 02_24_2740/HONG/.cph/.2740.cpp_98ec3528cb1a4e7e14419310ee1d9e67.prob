@@ -1,0 +1,1 @@
+{"name":"Local: 2740","url":"/Users/yoojunhong/Desktop/gukbbap/02_24_2740/HONG/2740.cpp","tests":[{"id":1614345465949,"input":"3 2\n1 2\n3 4\n5 6\n2 3\n-1 -2 0\n0 0 3","output":"-1 -2 6\n-3 -6 12\n-5 -10 18"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yoojunhong/Desktop/gukbbap/02_24_2740/HONG/2740.cpp","group":"local","local":true}
