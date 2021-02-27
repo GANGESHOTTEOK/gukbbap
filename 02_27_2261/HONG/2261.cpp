@@ -32,7 +32,7 @@ int getMinDistance(int left, int right) {
             left++;
         }
         if (right > left) {
-            rValue = min(rValue, distance(coord[left], coord[right]));
+            rValue = min(rValue, distan ce(coord[left], coord[right]));
             right--;
         }
     }
