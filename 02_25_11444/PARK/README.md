@@ -86,7 +86,7 @@ int main(void) {
 
 	scanf("%lld", &B);
 	
-	if (B <= 2) {
+	if (B <= 2) { 1, 2 차례 피보나치 수 처리
 		printf("%d\n", 1);
 		return 0;
 	}
