@@ -7,7 +7,9 @@
 
 팀원들은 `main`에 바로 푸쉬 하지말고 각자의 브랜치를 파서 일일 커밋한 뒤, [gangeshotteok/gukbbap](https://github.com/GANGESHOTTEOK/gukbbap) 으로 스터디 전 까지 Pull request 할 것!  
 
-1일 1커밋을 원칙으로 페널티 1회당 벌금 5천원임.
+방학 1일 1커밋을 원칙으로 페널티 1회당 벌금 5천원임.
+
+학기 중 1주 3커밋을 원칙으로 페널티는 마찬가지로 1회당 5천원.
 
 ---
 
@@ -89,4 +91,7 @@
 |64|[11444](https://www.acmicpc.net/problem/11444)|피보나치 수 6|분할 정복|2021년 02월 25일|
 |65|[6549](https://www.acmicpc.net/problem/6549)|히스토그램에서 가장 큰 직사각형|분할 정복|2021년 02월 26일|
 |66|[2261](https://www.acmicpc.net/problem/2261)|가장 가까운 두 점|분할 정복|2021년 02월 27일|
+|67|[1920](https://www.acmicpc.net/problem/1920)|수 찾기|이분 탐색|2021년 03월|
+|68|[10816](https://www.acmicpc.net/problem/10816)|숫자 카드 2|이분 탐색|2021년 03월|
+|69|[1654](https://www.acmicpc.net/problem/1654)|랜선 자르기|이분 탐색|2021년 03월|
 <!-- ||[](https://www.acmicpc.net/problem/)||분할 정복|2021년 02월 20일| -->
