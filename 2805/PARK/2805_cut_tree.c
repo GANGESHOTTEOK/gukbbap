@@ -12,21 +12,21 @@ int main(void) {
 	
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &Tree[i]);
-		End = Tree[i] > End ? Tree[i] : End; // End¸¦ °¡Áö±â À§ÇÑ ºñ±³ 
+		End = Tree[i] > End ? Tree[i] : End; // Endë¥¼ ê°€ì§€ê¸° ìœ„í•œ ë¹„êµ 
 	}
 	
-	while(Start <= End) { // Åé¿¡ ´ëÇÑ ÀÌºĞÅ½»ö 
+	while(Start <= End) { // í†±ì— ëŒ€í•œ ì´ë¶„íƒìƒ‰ 
 		int Mid = (Start + End)/2;
 		long long Sum = 0;
 		
 		for(int i = 0; i < N; i++) {
 			if (Tree[i] > Mid)
-				Sum = Sum + (Tree[i]-Mid);
+				Sum = Sum + (Tree[i]-Mid); // ìë¥¸ ë¶€ë¶„ì˜ 
 		}
 
 		if (Sum >= M) {
 			Start = Mid + 1;
-			LongestSaw = (Mid > LongestSaw) ? Mid : LongestSaw; // ÃÖ´ë Åé ±æÀÌ °»½Å 
+			LongestSaw = (Mid > LongestSaw) ? Mid : LongestSaw; // ìµœëŒ€ í†± ê¸¸ì´ ê°±ì‹  
 		}
 		else
 			End = Mid-1;
