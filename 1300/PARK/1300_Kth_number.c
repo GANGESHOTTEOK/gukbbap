@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// 2021.03.22 18:39
+// 1116KB, 12ms
+
 int Min(const int a, const int b) {
 	return (a < b ? a : b);
 }
