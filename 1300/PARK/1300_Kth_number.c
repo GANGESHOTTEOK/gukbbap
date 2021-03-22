@@ -14,7 +14,7 @@ int main(void) {
 	
 	K = (K > 1000000000) ? 1000000000 : K; // 문제 조건 충족. 필요없는듯?
 	
-	End = K; // End 갱신
+	End = K; // End 갱신, K번째 수는 K를 넘을 수 
 	
 	while(Start <= End) { // Start와 End는 K 번째 수의 범위
 		int Mid = (Start+End)/2; // K 번째 수의 후보 정의
