@@ -94,7 +94,14 @@
 |67|[1920](https://www.acmicpc.net/problem/1920)|수 찾기|이분 탐색|2021년 03월|
 |68|[10816](https://www.acmicpc.net/problem/10816)|숫자 카드 2|이분 탐색|2021년 03월|
 |69|[1654](https://www.acmicpc.net/problem/1654)|랜선 자르기|이분 탐색|2021년 03월|
-||[1300](https://www.acmicpc.net/problem/1300)|K번째 수|이분 탐색|2021년 3월| -->
-||[2110](https://www.acmicpc.net/problem/2110)|공유기 설치|이분 탐색|2021년 3월|
-||[2805](https://www.acmicpc.net/problem/2805)|나무 자르기|이분 탐색|2021년 3월|
-<!-- ||[](https://www.acmicpc.net/problem/)||이분 탐색|2021년 3월| -->
+|70|[1300](https://www.acmicpc.net/problem/1300)|K번째 수|이분 탐색|2021년 3월|
+|71|[2110](https://www.acmicpc.net/problem/2110)|공유기 설치|이분 탐색|2021년 3월|
+|72|[2805](https://www.acmicpc.net/problem/2805)|나무 자르기|이분 탐색|2021년 3월|
+|73|[2110](https://www.acmicpc.net/problem/2110)|공유기 설치|이분 탐색|2021년 3월| 
+|74|[1300](https://www.acmicpc.net/problem/1300)|K번째 수|이분 탐색|2021년 3월| 
+|75|[12015](https://www.acmicpc.net/problem/12015)|가장 긴 증가하는 부분 수열 2|이분 탐색|2021년 3월|
+|76|[11279](https://www.acmicpc.net/problem/11279)|최대 힙|우선순위 큐|2021년 3월|
+|77|[1927](https://www.acmicpc.net/problem/1927)|최소 힙|우선순위 큐|2021년 3월|
+<!-- |78|[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
+<!-- |79|[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
+<!-- ||[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
