@@ -102,6 +102,7 @@
 |75|[12015](https://www.acmicpc.net/problem/12015)|가장 긴 증가하는 부분 수열 2|이분 탐색|2021년 3월|
 |76|[11279](https://www.acmicpc.net/problem/11279)|최대 힙|우선순위 큐|2021년 3월|
 |77|[1927](https://www.acmicpc.net/problem/1927)|최소 힙|우선순위 큐|2021년 3월|
-<!-- |78|[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
-<!-- |79|[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
-<!-- ||[](https://www.acmicpc.net/problem/)||우선순위 큐|2021년 3월| -->
+|78|[11286](https://www.acmicpc.net/problem/11286)|절댓값 힙|우선순위 큐|2021년 3월|
+|79|[1655](https://www.acmicpc.net/problem/1655)|가운데를 말해요|우선순위 큐|2021년 3월|
+|80|[11066](https://www.acmicpc.net/problem/11066)|파일 합치기|동적계획법|2021년 3월|
+<!-- ||[](https://www.acmicpc.net/problem/)||동적계획법|2021년 3월| -->
