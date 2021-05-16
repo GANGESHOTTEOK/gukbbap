@@ -14,13 +14,10 @@
 ---
 
 ### 팀원
-부산대학교 정보컴퓨터공학과 안현주
-
-부산대학교 정보컴퓨터공학과 홍유준
-
-부산대학교 정보컴퓨터공학과 이준영
-
-부산대학교 정보컴퓨터공학과 박동한
+*부산대학교 정보컴퓨터공학과 안현주
+*부산대학교 정보컴퓨터공학과 홍유준
+*부산대학교 정보컴퓨터공학과 이준영
+*부산대학교 정보컴퓨터공학과 박동한
 
 |[AN](https://github.com/muzee99)|[HONG](https://github.com/kick-snare)|[LEE](https://github.com/rubinstory)|[PARK](https://github.com/DonghanPark)|
 |:-:|:-:|:-:|:-:|
